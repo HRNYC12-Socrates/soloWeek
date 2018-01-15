@@ -178,11 +178,10 @@ app.get('/testDif', (req, res) => {
     res.send(days.toString())
   })
 })
- 
-  app.set('port', process.env.PORT || 3000)
+
+   app.set('port', process.env.PORT || 3000)
 
   const server = app.listen(app.get('port'))
   const host = server.address().address;
   const port = server.address().port;
   console.log('Example app listening at http://%s:%s', host, port);
-});

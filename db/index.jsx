@@ -2,6 +2,14 @@ const Sequelize = require('sequelize')
 const sequelize = new Sequelize('daa5f39q159b0d','fageyjgnpeswxg', 'a152825a4f7dcb7f48bf1d60f117fb7dc1608c8424ac6036622c34610df966fc', {
   host: 'ec2-23-21-201-255.compute-1.amazonaws.com',
   dialect: 'postgres' || 'mysql',
+ dialectOptions: {
+     ssl: true
+ },
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
+  }
 });
 
 sequelize
